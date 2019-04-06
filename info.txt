@@ -1,0 +1,10 @@
+
+docker build -t vasu-mysql .    (image name = vasu-mysql)
+
+docker run -d -p 2012:3306 --name vasu-mysql -e MYSQL_ROOT_PASSWORD=root vasu-mysql                (container name = vasu-mysql)
+
+docker exec -it containerId bash
+mysql -u root -p
+show databases;
+use vasu;
+select * from aritcles;
